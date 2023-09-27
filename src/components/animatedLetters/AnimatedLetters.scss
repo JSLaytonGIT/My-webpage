@@ -1,0 +1,43 @@
+.text-animate {
+    display: inline-block;
+    opacity: 0;
+    animation: bounceIn 1s 1s;
+    animation-fill-mode: forwards;
+    min-width: 10px;
+}
+
+.text-animate-hover {
+    min-width: 10px;
+    display: inline-block;
+    animation-fill-mode: both;
+
+    &:hover {
+        animation: rubberBand 1s;
+        color: #ed7966;
+    }
+}
+
+.name-animate {
+    position: absolute;
+    bottom: 784px;
+    left: 76px;
+    animation: fall 0.2s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 4.5s;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(600px);
+    }
+}
+
+@for $i from 1 through 40 {
+    .text-animate._#{$i} {
+      animation-delay: #{$i / 10}s;
+    }
+}
+  

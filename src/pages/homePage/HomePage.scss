@@ -1,0 +1,76 @@
+.home-page {
+    .text-zone {
+        position: absolute;
+        right: 0%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+    }
+
+    h1 {
+        color: white;
+        align-items: right;
+        font-size: 53px;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+    }
+}
+
+h2 {
+    color: #8d8d8d;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 11px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    animation: fadeIn 1s 1.8s backwards;
+}
+
+.flat-button {
+    color: #ed7966;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid #ed7966;
+    margin-top: 25px;
+    float: left;
+    animation: fadeInAnimation 1s 1.8s backwards;
+    white-space: nowrap;
+
+    &:hover {
+        background: #ed7966;
+        color: #333;
+    }
+}
+
+.dust-container {
+    .dust {
+        position: absolute;
+        left: 900px;
+        top: 200px;
+        height: 200px;
+        width: 300px;
+        z-index: 99;
+        opacity: 0;
+        animation: fadeOut 2s;
+        animation-delay: 4.7s;
+    }
+
+    .crack{
+        position: absolute;
+        left: 970px;
+        top: 255px;
+        height: 150px;
+        width: 200px;
+        z-index: 0;
+        opacity: 0;
+        animation: fadeOut 4s;
+        animation-delay: 4.7s;
+    }
+}
+
