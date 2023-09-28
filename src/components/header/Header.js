@@ -1,12 +1,15 @@
-import './Sidebar.scss';
+import './Header.scss';
 import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-const Sidebar = () => {
+const Header = () => {
     return (
         <div className='nav-bar'>
+                <Link className="logo"to="/">
+                    <img src={require('./assets/logoname.png')} alt='logo' />
+                </Link>
             <nav>
                 <NavLink exact='true' to='/' activeclassname='active'>
                     <FontAwesomeIcon icon={faHome} color='#4d4d4e' />
@@ -34,4 +37,4 @@ const Sidebar = () => {
     )
 }
 
-export default Sidebar;
+export default Header;

@@ -1,5 +1,6 @@
 .home-page {
     .text-zone {
+        z-index: 1;
         position: absolute;
         right: 0%;
         top: 50%;
@@ -20,7 +21,7 @@
 
 h2 {
     color: #8d8d8d;
-    margin-top: 20px;
+    margin-top: 15px;
     font-weight: 400;
     font-size: 11px;
     font-family: sans-serif;
@@ -30,14 +31,15 @@ h2 {
 
 .flat-button {
     color: #ed7966;
+    background-color: #141850;
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 4px;
     font-family: sans-serif;
     text-decoration: none;
-    padding: 10px 18px;
+    padding: 12px 18px;
+    margin-top: 30px;
     border: 1px solid #ed7966;
-    margin-top: 25px;
     float: left;
     animation: fadeInAnimation 1s 1.8s backwards;
     white-space: nowrap;
@@ -48,11 +50,98 @@ h2 {
     }
 }
 
-.dust-container {
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+}
+
+.flat-button-animate {
+    color: #ed7966;
+    background-color: #141850;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 12px 18px;
+    margin-top: 30px;
+    border: 1px solid #ed7966;
+    float: left;
+    animation: rotater 6s forwards;
+    white-space: nowrap;
+
+    &:hover {
+        background: #ed7966;
+        color: #333;
+    }
+}
+
+@keyframes rotater {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: top left;
+    }
+    10% {
+        transform: rotate(170deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+    25% {
+        transform: rotate(20deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+    38% {
+        transform: rotate(115deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+    52% {
+        transform: rotate(50deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+    65% {
+        transform: rotate(95deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+    77% {
+        transform: rotate(65deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+    100% {
+        transform: rotate(90deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+.name-container {
     .dust {
         position: absolute;
-        left: 900px;
-        top: 200px;
+        left: -100px;
+        top: -80px;
         height: 200px;
         width: 300px;
         z-index: 99;
@@ -63,8 +152,8 @@ h2 {
 
     .crack{
         position: absolute;
-        left: 970px;
-        top: 255px;
+        left: -30px;
+        top: -30px;
         height: 150px;
         width: 200px;
         z-index: 0;
@@ -72,5 +161,41 @@ h2 {
         animation: fadeOut 4s;
         animation-delay: 4.7s;
     }
+    
+    .name-animate {
+        position: absolute;
+        bottom: 784px;
+        left: 76px;
+        animation: fall 0.2s linear;
+        animation-fill-mode: forwards;
+        animation-delay: 4.5s;
+    }
 }
 
+@keyframes fall {
+    0% {
+        transform: translateY(0) translateX(-800px);
+    }
+    100% {
+        transform: translateY(600px);
+    }
+}
+
+.image-container {
+    position: absolute;
+    top: 15vh;
+    left: 10vw;
+    pointer-events: none;
+    width: 500px;
+    height: 500px;
+    border-radius: 500px;
+    z-index: 999;
+}
+  
+.hidden-image {
+    width: 500px;
+    height: 500px;
+    border-radius: 500px;
+    opacity: 1;
+}
+  

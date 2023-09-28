@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import AnimatedLetters from "../../components/animatedLetters";
 import Loader from "react-loaders";
+import { motion } from 'framer-motion';
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -12,8 +13,14 @@ const About = () => {
     }, [])
 
     return(
-        <>
-            <div className="container about-page">
+        <motion.div 
+            key={"my_unique_key"}
+            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+        >
+            <div className="container contact-page">
                 <div className="text-zone">
                     <h1>
                         <AnimatedLetters letterClass={letterClass} strArray={'About me'.split('')} idx={15} />
@@ -23,7 +30,7 @@ const About = () => {
                 </div>
             </div>
             <Loader type="ball-scale-ripple-multiple" />
-        </>
+        </motion.div>
     )
 }
 
