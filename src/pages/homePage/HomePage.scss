@@ -181,21 +181,210 @@ h2 {
     }
 }
 
-.image-container {
+.particles-container {
     position: absolute;
     top: 15vh;
-    left: 10vw;
+    left: 12vw;
     pointer-events: none;
     width: 500px;
     height: 500px;
     border-radius: 500px;
     z-index: 999;
+    animation: fadeIn 2s;
 }
-  
+
 .hidden-image {
-    width: 500px;
+    max-width: 500px;
     height: 500px;
     border-radius: 500px;
     opacity: 1;
 }
-  
+
+.profilePic-container {
+    position: absolute;
+    top: 15vh;
+    left: 12vw;
+}
+
+.bell {
+    position: absolute;
+    top: 88vh;
+    left: 95vw;
+    width: 50px;
+    height: auto;
+    animation: wiggle 2s linear infinite;
+}
+
+.bell-vanish{
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes wiggle {
+    0%, 7% {
+        transform: rotateZ(0);
+        transform-origin: bottom;
+    }
+    15% {
+        transform: rotateZ(-15deg);
+        transform-origin: bottom;
+    }
+    20% {
+        transform: rotateZ(10deg);
+        transform-origin: bottom;
+    }
+    25% {
+        transform: rotateZ(-10deg);
+        transform-origin: bottom;
+    }
+    30% {
+        transform: rotateZ(6deg);
+        transform-origin: bottom;
+    }
+    35% {
+        transform: rotateZ(-4deg);
+        transform-origin: bottom;
+    }
+    40%, 100% {
+        transform: rotateZ(0);
+        transform-origin: bottom;
+    }
+}
+
+.torch-container {
+    animation: torchPush 4s 1s ease-out backwards;
+
+    .torch {
+        position: absolute;
+        top: 34.2vh;
+        left: 48vw;
+        height: 200px;
+        width: auto;
+        transform: rotate(-127deg);
+    }
+
+    .torch-vanish {
+        animation: torchFadeOut 3s forwards;
+    }
+
+    .hand {
+        position: absolute;
+        top: 49.2vh;
+        left: 52.5vw;
+        height: 100px;
+        width: auto;
+        animation: handAway 2s 5s forwards;
+    }
+}
+
+@keyframes torchFadeOut {
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes torchPush {
+    0% {
+        transform: translateY(500px);
+    }
+}
+
+@keyframes handAway {
+    99% {
+        transform: translateY(500px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.trapezoid-container {
+    position: absolute;
+    left: 44vw;
+    top: 43vh;
+    transform: rotate(90deg);
+
+    .trapezoid {
+        width: 20px;
+        height: 20px;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 60px solid transparent;
+        position: relative;
+        transform: perspective(1px) rotateX(1deg);
+    }
+    
+    .trapezoid::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        box-shadow: 0 10px 50px 60px yellow;
+        z-index: -1;
+    }
+    
+}
+
+.light-animated {
+    animation: flashOut 3s forwards;
+}
+
+@keyframes flashOut {
+    0% {
+        opacity: 1;
+    }
+    2% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 1;
+    }
+    16% {
+        opacity: 0;
+    }
+    18% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    22%, 70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.torch-image-animated {
+    animation: flashOutImage 2s 0.5s forwards;
+}
+
+@keyframes flashOutImage {
+    0% {
+        opacity: 1;
+    }
+    2% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 1;
+    }
+    16% {
+        opacity: 0;
+    }
+    18% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    22%, 100% {
+        opacity: 1;
+    }
+}

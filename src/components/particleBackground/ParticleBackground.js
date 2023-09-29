@@ -19,11 +19,7 @@ const ParticleBackground = ({ style }) => {
                 init={particlesInit}
                 loaded={particlesLoaded}
                 options={{
-                    background: {
-                        color: {
-                            value: "#0d47a1",
-                        },
-                    },
+                    fullScreen: false,
                     fpsLimit: 120,
                     interactivity: {
                         events: {
@@ -32,7 +28,7 @@ const ParticleBackground = ({ style }) => {
                                 mode: "push",
                             },
                             onHover: {
-                                enable: false,
+                                enable: true,
                                 mode: "repulse",
                             },
                             resize: true,
@@ -42,17 +38,17 @@ const ParticleBackground = ({ style }) => {
                                 quantity: 4,
                             },
                             repulse: {
-                                distance: 20,
+                                distance: 110,
                                 duration: 0.4,
                             },
                         },
                     },
                     particles: {
                         color: {
-                            value: "#ffffff",
+                            value: '#fff',
                         },
                         links: {
-                            color: "#ffffff",
+                            color: '#fff',
                             distance: 150,
                             enable: true,
                             opacity: 0.5,

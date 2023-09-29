@@ -81,7 +81,7 @@ const Contact = () => {
                     <MapContainer center={[51.5080, -0.1281]} zoom={12}>
                         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                         <Marker position={[51.5080, -0.1281]}>
-                            <Popup>I am a London-based developer</Popup>
+                            <Popup>I am a London-based developer<br />(Note: I do not live in trafalgur square)</Popup>
                         </Marker>
                     </MapContainer>
                 </div>

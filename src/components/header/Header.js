@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <div className='nav-bar'>
                 <Link className="logo"to="/">
-                    <img src={require('./assets/logoname.png')} alt='logo' />
+                    <img src={require('./assets/logo.png')} alt='logo' />
                 </Link>
             <nav>
                 <NavLink exact='true' to='/' activeclassname='active'>
