@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AnimatedLetters from '../../components/animatedLetters';
 import Loader from 'react-loaders';
@@ -22,8 +22,12 @@ const HomePage = () => {
 
     const handleMouseMove = (mousePosition) => {
         const { clientX, clientY } = mousePosition;
-        setCursorX(clientX - 185);
-        setCursorY(clientY - 150);
+        const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+        const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+        const xPixels = vw * 0.14;
+        const yPixels = vh * 0.198;
+        setCursorX(clientX - xPixels);
+        setCursorY(clientY - yPixels);
     };
 
     const handleBellClick = () => {
@@ -55,13 +59,13 @@ const HomePage = () => {
 
     return (
         <motion.div 
-            key={"my_unique_key"}
+            key={"homepage"}
             exit={{ opacity:0 }}
             initial={{ opacity:0 }}
             animate={{ opacity:1 }}
             transition={{ duration: 0.6 }}
         >
-            <div className="container home-page" onMouseMove={handleMouseMove}>
+            <div className="container home-page" onMouseMove={handleMouseMove} >
                 <div className="text-zone">
                     <h1 className={letterClass}>Hello there!</h1>
                     <h1>
@@ -81,20 +85,22 @@ const HomePage = () => {
                     </h1>
                     <h2>Frontend Developer / fullstack Developer</h2>
                     <button to='/contact' onClick={handleContactClick} className={contactClick}>Contact</button>
+
+                    {particles && <div className="particles-container">
+                        <ParticleBackground className="hidden-image" circle='true' />
+                        <div className='profilePic-container'>
+                            {torchClicked && <img src={ProfilePic} alt='me' className='hidden-image torch-image-animated' style={{clipPath: `circle(${torchRadius}px at ${cursorX}px ${cursorY}px)`}} />}
+                        </div>
+                    </div>}
+                    
+                    {bellClick && <div className='torch-container'> 
+                        <img src={require('./assets/hand.png')} alt='hand' className='hand' />
+                        <img src={require('./assets/torch.png')} alt='torch' className={torchClass} onClick={handleTorchClick} />
+                        <div className='trapezoid-container'>
+                            {torchClicked && <div className='trapezoid light-animated' />}
+                        </div>
+                    </div>}
                 </div>
-                {particles && <div className="particles-container">
-                    <ParticleBackground className="hidden-image" />
-                </div>}
-                <div className='profilePic-container'>
-                    {torchClicked && <img src={ProfilePic} alt='me' className='hidden-image torch-image-animated' style={{clipPath: `circle(${torchRadius}px at ${cursorX}px ${cursorY}px)`}} />}
-                </div>
-                <div className='trapezoid-container'>
-                    {torchClicked && <div className='trapezoid light-animated' />}
-                </div>
-                {bellClick && <div className='torch-container'> 
-                    <img src={require('./assets/hand.png')} alt='hand' className='hand' />
-                    <img src={require('./assets/torch.png')} alt='torch' className={torchClass} onClick={handleTorchClick} />
-                </div>}
                 <img src={require('./assets/bell.png')} alt='bell' className={bellClass} onClick={handleBellClick} />
             </div>
             

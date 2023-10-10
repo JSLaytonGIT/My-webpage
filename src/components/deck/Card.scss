@@ -1,0 +1,45 @@
+.deck {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: none;
+
+    #inner {
+        background-color: black;
+        background-size: auto 50%;
+        background-repeat: no-repeat;
+        background-position: center 30%;
+        width: 45vh;
+        max-width: 300px;
+        height: 85vh;
+        max-height: 500px;
+        will-change: transform;
+        border-radius: 10px;
+        box-shadow: 0 12.5px 100px -10px rgba(0, 0, 0, 0.5), 0 10px 10px -10px rgba(0, 0, 0, 0.3);
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        
+        &:hover {
+            cursor: grab;
+        }
+
+        &:active {
+            cursor: grabbing;
+        }
+
+        .text {
+            position: relative;
+            top: 32%;
+            text-align: center;
+            color: white;
+            font-size: 36px;
+            font-family: 'La Belle Aurore';
+        }
+    }
+}
+  

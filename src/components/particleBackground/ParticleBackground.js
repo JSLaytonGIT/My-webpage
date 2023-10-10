@@ -3,7 +3,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import './ParticleBackground.scss';
 
-const ParticleBackground = ({ style }) => {
+const ParticleBackground = ({ style, circle }) => {
     const particlesInit = useCallback(async engine => {
         await loadFull(engine);
     }, []);
@@ -13,7 +13,7 @@ const ParticleBackground = ({ style }) => {
     }, []);
 
     return (
-        <div className="particle-container" style={style}>
+        <div className="particle-container" circle={circle} style={style}>
             <Particles
                 id="tsparticles"
                 init={particlesInit}

@@ -1,0 +1,276 @@
+.portfolio-page {
+    position: relative;
+    overflow-x: hidden;
+    padding-top: 24vh;
+    height: 84vh;
+    width: 100vw;
+    scroll-snap-align: center;
+}
+
+.carousel-container{
+    position: relative;
+    width: 200%;
+    right: 29.9%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 80%;
+    overflow: visible;
+}
+  
+.column {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 0%;
+    width: 100%;
+
+    &:nth-child(1) {
+        opacity: 0;
+    }
+
+    &:nth-child(2) {
+        opacity: 0.5;
+        transform: scale(0.7);
+    }
+
+    &:nth-child(4) {
+        opacity: 0.5;
+        transform: scale(0.7);
+    }
+
+    &:nth-child(5) {
+        opacity: 0;
+    }
+
+    &:first-child[rightSlideAnimation='1'] {
+        animation: vanishToLeft 1s forwards;
+    }
+
+    &:nth-child(2)[rightSlideAnimation='1'] {
+        animation: leftToMiddle 1s forwards;
+    }
+
+    &:nth-child(3)[rightSlideAnimation='1'] {
+        animation: middleToRight 1s forwards;
+    }
+
+    &:nth-child(4)[rightSlideAnimation='1'] {
+        animation: rightToVanish 1s forwards;
+    }
+
+    &:nth-child(2)[leftSlideAnimation='1'] {
+        animation: leftToVanish 1s forwards;
+    }
+
+    &:nth-child(3)[leftSlideAnimation='1'] {
+        animation: middleToLeft 1s forwards;
+    }
+
+    &:nth-child(4)[leftSlideAnimation='1'] {
+        animation: rightToMiddle 1s forwards;
+    }
+
+    &:nth-child(5)[leftSlideAnimation='1'] {
+        animation: vanishToRight 1s forwards;
+    }
+}
+
+.hidden-card-left {
+    position: absolute;
+    width: 27.3%;
+    height: 74.2%;
+    top: 2.5%;
+    left: -16%;
+    opacity: 0;
+    transform: scale(0.1);
+    
+    &[leftSlideAnimation='1'] {
+        animation: vanishToLeft 1s forwards;
+    }
+}
+.hidden-card-right {
+    position: absolute;
+    opacity: 0;
+}
+
+@keyframes leftToVanish {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0.1) translateX(-200%);
+        opacity: 0;
+    }
+}
+
+@keyframes middleToLeft {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.7) translateX(-143%);
+        opacity: 0.5;
+    }
+}
+
+@keyframes rightToMiddle {
+    0% {
+        opacity: 0.5;
+        transform: scale(0.7) ;
+    }
+    100% {
+        transform: scale(1) translateX(-100%);
+        opacity: 1;
+    }
+}
+
+@keyframes vanishToRight {
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(0.7) translateX(-143%);
+        opacity: 0.5;
+    }
+}
+
+ 
+@keyframes rightToVanish {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0.1) translateX(200%);
+        opacity: 0;
+    }
+}
+
+@keyframes middleToRight {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.7) translateX(143%);
+        opacity: 0.5;
+    }
+}
+
+@keyframes leftToMiddle {
+    0% {
+        opacity: 0.5;
+        transform: scale(0.7)
+    }
+    100% {
+        transform: scale(1) translateX(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes vanishToLeft {
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(0.7) translateX(143%);
+        opacity: 0.5;
+    }
+}
+
+.card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    padding-bottom: 0;
+    background-color: #fff;
+    box-shadow: 10px 10px 30px -5px rgba(0, 0, 0, 1);
+    transition: box-shadow 0.5s;
+    will-change: transform;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+  
+.card-body {
+    margin-top: 27px;
+    margin-bottom: 27px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.image-container {
+    margin-top: auto;
+    padding-top: 25px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+}
+  
+.image-inner-container {
+    width: 100%;
+    margin: 0 auto;
+}
+  
+.ratio {
+    position: relative;
+    width: 100%;
+    height: 0;
+}
+  
+.ratio-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.navigation-buttons {
+    position: absolute;
+    top: 44%;
+    left: 14.9%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.arrow {
+    color: #fff;
+    padding: 0 20px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.arrow:hover {
+    color: #ed7966;
+    animation: rubberBand 1s;
+}
+
+.up-arrow {
+    position: absolute;
+    left: 49.5%;
+    top: 15vh;
+    color: #555;
+    
+    &:hover {
+        cursor: pointer;
+        color: #ed7966;
+        animation: rubberBand 1s;
+    }
+}

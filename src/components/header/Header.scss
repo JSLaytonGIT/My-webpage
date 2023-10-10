@@ -12,6 +12,7 @@
     .logo {
         display: block;
         padding-left: 20px;
+        margin-right: 16px;
 
         img {
             display: block;
@@ -28,7 +29,7 @@
         display: flex;
         align-items: center;
         height: 100%;
-        padding-right: 0px;
+        padding-right: 1.9px;
 
         a {
             font-size: 22px;
@@ -40,51 +41,11 @@
             text-decoration: none;
             padding: 0 30px;
 
-            i {
-                transition: all 0.3s ease-out;
-            }
-
             &:hover {
                 color: #ed7966;
 
                 svg {
-                    opacity: 0;
-                }
-
-                &:after {
-                    opacity: 1;
-                }
-            }
-
-            &:after {
-                content: '';
-                font-size: 9px;
-                letter-spacing: 2px;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                display: block;
-                width: 100%;
-                text-align: center;
-                opacity: 0;
-                transition: all 0.3 ease-out;
-            }
-
-            &:first-child {
-                &::after {
-                    content: 'HOME';
-                }
-            }
-
-            &:nth-child(2) {
-                &::after {
-                    content: 'ABOUT';
-                }
-            }
-
-            &:nth-child(3) {
-                &::after {
-                    content: 'CONTACT';
+                    transform: scale(1.2);
                 }
             }
         }

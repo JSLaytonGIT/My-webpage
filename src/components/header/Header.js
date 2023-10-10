@@ -1,7 +1,7 @@
 import './Header.scss';
 import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUser, faEnvelope, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
                     <img src={require('./assets/logo.png')} alt='logo' />
                 </Link>
             <nav>
-                <NavLink exact='true' to='/' activeclassname='active'>
+                <NavLink data-text="Home" exact='true' to='/' activeclassname='active'>
                     <FontAwesomeIcon icon={faHome} color='#4d4d4e' />
                 </NavLink>
                 <NavLink exact='true' to='/about' activeclassname='active'>

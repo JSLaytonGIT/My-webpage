@@ -22,7 +22,7 @@ const Contact = () => {
         emailjs
             .sendForm('service_53uz04o','template_fvxafxw',refForm.current,'LJrIxDFcUWw80OlAH')
             .then(() => {
-                alert('Message successful')
+                alert('Message successfully sent')
                 window.location.reload(false)
             },
             (error) => {
@@ -34,7 +34,7 @@ const Contact = () => {
 
     return (
         <motion.div 
-            key={"my_unique_key"}
+            key={"contact"}
             exit={{ opacity:0 }}
             initial={{ opacity:0 }}
             animate={{ opacity:1 }}

@@ -1,5 +1,8 @@
 html {
   font-size: 62.5%;
+  user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
 }
 
 body {
