@@ -45,7 +45,7 @@
         left: 10%;
         top: 48%;
         transform: translateY(-50%);
-        width: 35%;
+        width: 37%;
         vertical-align: middle;
         display: table-cell;
         max-height: 90%;
@@ -56,15 +56,15 @@
             color: #ed7966;
             font-weight: 400;
             margin-top: 0;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             position: relative;
-            left: 10px;
         }
 
         p {
-            font-size: 13px;
+            text-align: justify;
+            font-size: 17px;
             color: white;
-            font-family: sans-serif;
+            font-family: 'Calibri';
             font-weight: 300;
             min-width: fit-content;
             animation: pulse 1s;

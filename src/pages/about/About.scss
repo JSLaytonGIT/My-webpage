@@ -40,7 +40,7 @@
     
     .swipecards {
         position: absolute;
-        top: 0vh;
+        top: 1vh;
         left: 23vw;
     }
 
@@ -49,7 +49,7 @@
             transform: translateY(0);
         }
         100% {
-            transform: translateY(-78vh) rotate(-180deg);
+            transform: translateY(-81vh) rotate(-180deg);
         }
     }
 
@@ -143,4 +143,9 @@
     position: relative;
     height: 100vh;
     width: 100vw;
+}
+
+.rightTextArrow {
+    position: relative;
+    top: 0.9px;
 }

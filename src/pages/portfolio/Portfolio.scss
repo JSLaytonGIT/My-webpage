@@ -190,20 +190,23 @@
     box-shadow: 10px 10px 30px -5px rgba(0, 0, 0, 1);
     transition: box-shadow 0.5s;
     will-change: transform;
-    border-radius: 10px;
+    border-radius: 40px;
     width: 100%;
 }
 
 .card-title {
-    font-size: 22px;
+    text-align: center;
+    font-size: 24px;
     font-weight: 600;
 }
   
 .card-body {
+    text-align: center;
     margin-top: 27px;
-    margin-bottom: 27px;
+    margin-bottom: 10px;
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 19px;
+    font-family: 'Calibri';
 }
 
 .image-container {
