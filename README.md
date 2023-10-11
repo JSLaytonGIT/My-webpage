@@ -1,7 +1,5 @@
 Click here to run the application. VERCEL LINK: https://my-webpage-three.vercel.app/
 
-Work in progress.
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
