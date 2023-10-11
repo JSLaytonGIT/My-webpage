@@ -19,7 +19,7 @@ const About = () => {
     const handleSixthCardClick = () => {
         setTimeout(() => {
             setFlashIcon(true);
-        }, 3000);
+        }, 2500);
     };
 
     useEffect(() => {
@@ -56,7 +56,7 @@ const About = () => {
             <div className="container about-page">
                 <div className="about-half" id='about'>
                     <div className="down-arrow">
-                        <FontAwesomeIcon icon={faAngleDoubleDown} size="2xl" onClick={handleDownClick} className={flashIcon ? 'flash-icon' : 'hidden'}/>
+                        <FontAwesomeIcon icon={faAngleDoubleDown} size="3x" onClick={handleDownClick} className={flashIcon ? 'flash-icon' : ''}/>
                     </div>
                     <RemoveScroll>
                         <div className="text-zone">
@@ -64,7 +64,7 @@ const About = () => {
                                 <AnimatedLetters letterClass={letterClass} strArray={'About me'.split('')} idx={15} />
                             </h1>
                             <p>I am an ambitious software developer with over three years of experience in the tech industry. I have worked with a variety of tools and languages in both front-end and back-end development. You'll find a selection of these over here: &nbsp;<FontAwesomeIcon icon={faHandPointRight} size="sm" className="rightTextArrow" /></p>
-                            <p>In addition to experience working on-site, I have also taken time to obtain external certifications in Java, business analysis, and project management. I am highly motivated and always keen to learn new languages and skills, while finding new and interesting ways to solve problems I come across.</p>
+                            <p>In addition to experience working on-site, I have also taken time to obtain external certifications in Java, business analysis, and project management. I am highly motivated and always keen to learn new languages and skills, while finding new and interesting ways to solve the problems I come across.</p>
                         </div>
                     </RemoveScroll>
                     {!showDeck && <div className="cardbox">

@@ -97,10 +97,6 @@
         animation: rubberBand 1s;
     }
 
-    .hidden {
-        opacity: 0;
-    }
-
     .flash-icon {
         animation: arrowFlash 3s;
     }
@@ -111,21 +107,21 @@
         }
         15% {
             color: #ed7966;
-            transform: scale(1.5);
+            transform: scale(2);
         }
         30% {
             color: #555;
         }
         45% {
             color: #ed7966;
-            transform: scale(1.5);
+            transform: scale(2);
         }
         60% {
             color: #555;
         }
         75% {
             color: #ed7966;
-            transform: scale(1.5);
+            transform: scale(2);
         }
         100% {
             color: #555;

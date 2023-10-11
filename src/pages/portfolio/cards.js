@@ -7,14 +7,14 @@ const cards = [
     {
         title: '⚡️ Task Manager ⚡️',
         description:
-            'Made in React. This is a personal task manager that allows users to create and delete tasks with descriptions, deadlines, estimated durations, priority, and current status. Tasks are ordered by current status and have visual cues to distinguish priority.',
+            'Made in React. This is a personal task manager that allows users to create and delete tasks with: descriptions, deadlines, estimated durations, priority, and current status. Tasks are ordered by current status and have visual cues to distinguish priority.',
         image: taskManagerImage,
         url: "https://task-manager--react.vercel.app/"
     },
     {
         title: '🤖 Chatbot Application 🤖',
         description:
-            'Built in Nexjs with Redux for state management. Users can interact with three different chatbots, each with fun and different function. The bots with remember various things the user has typed, even if the user moves to a different page.',
+            'Built in Next.js with Redux for state management. Users can interact with three different chatbots, each with a fun and different function. The bots with remember various things the user has typed, even if the user moves to a different page.',
         image: chatbot,
         url: "https://chat-app-next-js-react-redux.vercel.app/"
     },
