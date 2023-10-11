@@ -4,7 +4,7 @@ import Loader from "react-loaders";
 import { motion } from 'framer-motion';
 import Portfolio from "../portfolio/Portfolio";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleDown,  faHandPointRight} from '@fortawesome/free-solid-svg-icons';
 import { RemoveScroll } from 'react-remove-scroll';
 import Deck from "../../components/deck";
 import cardbox from './assets/cardboxNoBackground.png';
@@ -32,7 +32,7 @@ const About = () => {
         setCardboxClicked(true);
         setTimeout(() => {
             setShowDeck(true);
-        }, 2500);
+        }, 2000);
     }
 
     const handleDownClick = () => {
@@ -63,8 +63,8 @@ const About = () => {
                             <h1>
                                 <AnimatedLetters letterClass={letterClass} strArray={'About me'.split('')} idx={15} />
                             </h1>
-                            <p>I am an ambitious software developer with over three years of experience in the tech and corporate banking industries. Has worked with a variety of tools and languages in both front-end and back-end development, including: JavaScript, Java, Spring-Boot and React.</p>
-                            <p>In addition to experience working on-site and the professional training at the beginning of his career, he has also taken time to obtain external certifications in Java, business analysis, and project management. He is highly motivated and always keen to learn new languages and skills, whilst finding new ways to solve problems. He hopes to become a part of a team that values exploration and growth.</p>
+                            <p>I am an ambitious software developer with over three years of experience in the tech industry. I have worked with a variety of tools and languages in both front-end and back-end development. You'll find a selection of these over here: &nbsp;<FontAwesomeIcon icon={faHandPointRight} size="sm" className="rightTextArrow" /></p>
+                            <p>In addition to experience working on-site, I have also taken time to obtain external certifications in Java, business analysis, and project management. I am highly motivated and always keen to learn new languages and skills, while finding new and interesting ways to solve problems I come across.</p>
                         </div>
                     </RemoveScroll>
                     {!showDeck && <div className="cardbox">

@@ -8,7 +8,7 @@ const Card = ({title, description, image}) => {
             <div className="card-body">{description}</div>
             <div className="image-container">
                 <div className="image-inner-container">
-                    <div className="ratio" style={{ paddingTop: 64500 / 1016 + '%' }}>
+                    <div className="ratio" style={{ paddingTop: '63.5%' }}>
                         <div className="ratio-inner">
                             <img src={image} alt='Card' />
                         </div>
